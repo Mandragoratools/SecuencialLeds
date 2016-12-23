@@ -13,7 +13,7 @@ En esta versión Beta hemos incorporado unas cuantas funciones disponibles lista
 
 *Esta libreria está especialmente enfocada a leds, aunque podria usarse otro tipo de dispositivos como por ejemplo relays.
 
-#Uso
+#Referencia
 
 Declaramos e inicializamos la instancia de SecuencialLeds usando:
 
@@ -62,4 +62,32 @@ Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora
 **led1.cumulDesc();**             Secuencia de acumulación descendente
 
 **led1.aleatorio();**             Secuencia aleatoria
+***
+
+#Ejemplo de uso
+
+***
+```arduino
+#include <SecuencialLed.h>
+
+int leds[]={2,3,4,5,6,7,8,9,10};
+
+SecuencialLed led1;
+
+void setup() {
+led1.ledPins(4,leds);
+
+//led2.ledPins(9,leds2);
+led1.velocidad(1000);
+
+
+
+}
+
+void loop() {
+
+led1.ascendente();
+led2.descendente();
+}
+```
 ***
