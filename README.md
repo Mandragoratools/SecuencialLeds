@@ -33,7 +33,7 @@ Definimos la velocidad de las secuencias:
 
 Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora, combinandolas según lo que quramos:
 
-**led1.ascendente();**             Secuencia ascendente
+**led1.ascendente();**             _Secuencia ascendente_
 
 **led1.descendente();**             Secuencia descendente
  
