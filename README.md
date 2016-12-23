@@ -1,4 +1,4 @@
-# SecuencialLeds
+# SecuencialLeds(Beta)
 
 Copyrigth (c) Mandragora Tools 2016
 
