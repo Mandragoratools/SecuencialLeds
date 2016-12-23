@@ -31,8 +31,8 @@ Definimos la velocidad de las secuencias:
 
 - **led1.velocidad(1000);**
 
-Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora, combinandolas según lo que quramos:
-
+Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora, combinandolas según lo que queramos:
+***
 **led1.ascendente();**             Secuencia ascendente
 
 **led1.descendente();**             Secuencia descendente
@@ -60,3 +60,6 @@ Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora
 **led1.cumulAsc();**              Secuencia de acumulación ascendente
 
 **led1.cumulDesc();**             Secuencia de acumulación descendente
+
+**led1.aleatorio();**             Secuencia aleatoria
+***
