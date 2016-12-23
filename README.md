@@ -33,17 +33,17 @@ Definimos la velocidad de las secuencias:
 
 Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora, combinandolas según lo que quramos:
 
-- led1.ascendente();    Secuencia ascendente
-- led1.descendente();
-- led1.ascInvert();
-- led1.descInvert();
-- led1.progresAsc();
-- led1.progresDesc();
-- led1.progresInvAsc();
-- led1.progresInvDesc();
-- led1.ascInvert();
-- led1.descInvert();
-- led1.ascPar();
-- led1.ascImpar();
-- led1.cumulAsc();
-- led1.cumulDesc();
+- led1.ascendente();              Secuencia ascendente
+- led1.descendente();             Secuencia descendente
+- led1.ascInvert();             Secuencia ascendente invertida
+- led1.descInvert();              Secuencia descendente invertida
+- led1.progresAsc();              Progresión ascendente
+- led1.progresDesc();             Progresión descendente
+- led1.progresInvAsc();             Progresión invertida ascendente
+- led1.progresInvDesc();              Progresión invertida descendente
+- led1.ascInvert();             Secueencia ascendente invertida
+- led1.descInvert();              Secuencia descendente invertida
+- led1.ascPar();              Secuendia ascendente solo de leds pares
+- led1.ascImpar();              Secuencia ascendente solo de leds impares
+- led1.cumulAsc();              Secuencia de acumulación ascendente
+- led1.cumulDesc();             Secuencia de acumulación descendente
