@@ -74,16 +74,10 @@ SecuencialLed led1;
 
 void setup() {
 led1.ledPins(9,leds);
-
-
 led1.velocidad(1000);
-
-
-
 }
 
 void loop() {
-
 led1.ascendente();
 led1.descendente();
 }
