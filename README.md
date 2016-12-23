@@ -32,35 +32,35 @@ Definimos la velocidad de las secuencias:
 
 Y por ultimo en el void loop usaremos las secuencias que esta libreria incorpora, combinandolas según lo que queramos:
 ***
-**led1.ascendente();**             Secuencia ascendente
+**ascendente();**             Secuencia ascendente
 
-**led1.descendente();**             Secuencia descendente
+**descendente();**             Secuencia descendente
  
-**led1.ascInvert();**             Secuencia ascendente invertida
+**ascInvert();**             Secuencia ascendente invertida
 
-**led1.descInvert();**              Secuencia descendente invertida
+**descInvert();**              Secuencia descendente invertida
 
-**led1.progresAsc();**              Progresión ascendente
+**progresAsc();**              Progresión ascendente
 
-**led1.progresDesc();**             Progresión descendente
+**progresDesc();**             Progresión descendente
 
-**led1.progresInvAsc();**             Progresión invertida ascendente
+**progresInvAsc();**             Progresión invertida ascendente
 
-**led1.progresInvDesc();**              Progresión invertida descendente
+**progresInvDesc();**              Progresión invertida descendente
 
-**led1.ascInvert();**             Secueencia ascendente invertida
+**ascInvert();**             Secueencia ascendente invertida
 
-**led1.descInvert();**              Secuencia descendente invertida
+**descInvert();**              Secuencia descendente invertida
 
-**led1.ascPar();**              Secuendia ascendente solo de leds pares
+**ascPar();**              Secuendia ascendente solo de leds pares
 
-**led1.ascImpar();**              Secuencia ascendente solo de leds impares
+**ascImpar();**              Secuencia ascendente solo de leds impares
 
-**led1.cumulAsc();**              Secuencia de acumulación ascendente
+**cumulAsc();**              Secuencia de acumulación ascendente
 
-**led1.cumulDesc();**             Secuencia de acumulación descendente
+**cumulDesc();**             Secuencia de acumulación descendente
 
-**led1.aleatorio();**             Secuencia aleatoria
+**aleatorio();**             Secuencia aleatoria
 ***
 
 #Ejemplo de uso:
