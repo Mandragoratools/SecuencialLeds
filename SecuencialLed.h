@@ -28,7 +28,7 @@ class SecuencialLed
   
 
  void ascendente(){
-
+	compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	digitalWrite(_pins[i],HIGH);
@@ -38,29 +38,24 @@ class SecuencialLed
 }
 
 
- void cumulAsc(){
+bool cumulAsc(){
+	 compvelocidad();
 	for (int i=0;i<_n2;i++){
-
 	digitalWrite(_pins[i],HIGH);
-	delay(_velocidad);
-	if(i==_n2){
-	digitalWrite(_n2,HIGH);	
-	}else{
 	digitalWrite(_pins[i-1],LOW);
-	}
+	delay(_velocidad);
 	} 
 
    _n2--;
-  if(_n2<=0){
-	  _n2=_npins;
-	  exit;
-	  }
+  if(_n2<=0){_n2=_npins;
+  return true;
+  }else{return false;}
 	}
 
 
 
  void ascDos(){
-
+	compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	digitalWrite(_pins[i],HIGH);
@@ -72,7 +67,7 @@ class SecuencialLed
 }
 
  void ascInvert(){
-
+	compvelocidad();
 	for (int i=0;i<_npins;i++){
 	digitalWrite(_pins[i],HIGH);
 	}  
@@ -87,7 +82,7 @@ class SecuencialLed
 
 
  void progresAsc(){
-
+	compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	digitalWrite(_pins[i],HIGH);
@@ -97,7 +92,7 @@ class SecuencialLed
 
 
  void progresInvAsc(){
-
+	compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	digitalWrite(_pins[i],LOW);
@@ -107,7 +102,7 @@ class SecuencialLed
 
 
  void descendente(){
-
+	compvelocidad();
 	for (int i=_npins;i>-1;i--){
 
 	digitalWrite(_pins[i],HIGH);
@@ -120,26 +115,28 @@ class SecuencialLed
 
 
 
- void cumulDesc(){
-	
+ bool cumulDesc(){
+	compvelocidad();
 		for (int i=_npins;i>_n3;i--){
 
 	digitalWrite(_pins[i],HIGH);
+	digitalWrite(_pins[i+1],LOW);
 	delay(_velocidad);
-	if(i==_n3){
-	digitalWrite(_pins[i],HIGH);
-	} else{
-	digitalWrite(_pins[i+1],LOW);	
-	}
  }
  _n3++;
- if(_n3>=_npins)_n3=-1;
+ if(_n3>=_npins){
+	 _n3=-1;
+	 return true;
+ }else{
+	 return false;
+ }
+ 
  }
 	
 
 
  void descDos(){
-
+	compvelocidad();
 	for (int i=_npins;i>-1;i--){
 
 	digitalWrite(_pins[i],HIGH);
@@ -152,7 +149,7 @@ class SecuencialLed
 }
 
  void descInvert(){
-
+	compvelocidad();
 	for (int i=_npins;i>-1;i--){
 	digitalWrite(_pins[i],HIGH);
 	}  
@@ -166,7 +163,7 @@ class SecuencialLed
 
 
  void progresDesc(){
-
+	compvelocidad();
 	for (int i=_npins;i>-1;i--){
 
 	digitalWrite(_pins[i],HIGH);
@@ -177,6 +174,7 @@ class SecuencialLed
 
 
  void progresInvDesc(){
+	 compvelocidad();
 
 	for (int i=_npins;i>-1;i--){
 
@@ -187,6 +185,7 @@ class SecuencialLed
 
 
  void aleatorio(){
+	 compvelocidad();
 byte rand=random(0,_npins);
 digitalWrite(_pins[rand],HIGH);
 delay(_velocidad);
@@ -194,6 +193,7 @@ digitalWrite(_pins[rand],LOW);
 }
 
  void ascPar(){
+	 compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	if(i & 0x01){
@@ -207,6 +207,7 @@ digitalWrite(_pins[rand],LOW);
 
 
  void ascImpar(){
+	 compvelocidad();
 	for (int i=0;i<_npins;i++){
 
 	if(i & 0x01){
@@ -230,11 +231,18 @@ digitalWrite(_pins[rand],LOW);
 	private:
     int _pins[12];
 	int _npins;
-	int _velocidad;
+	int _velocidad=0;
 	int _n;
 	int _n2=_npins;
 	int _n3=-1;
+	void compvelocidad(){
+		if(_velocidad==0){
+		_velocidad=1000;	
+		}
+		
+	}
 
 };
 
 #endif
+
