@@ -83,3 +83,4 @@ led1.descendente();
 }
 ```
 ***
+![Imagen de la libreria]{http://github.com/Mandragoratools/SecuencialLeds/secuencialleds.png}
